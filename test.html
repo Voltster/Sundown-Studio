@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "NeueHaasDisplayRoman",sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    
+}
+body{
+    padding: 50px;
+}
+.circle{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    filter: blur(10px);
+    background-color: orangered;
+    position: absolute;
+    animation: anime 3s linear infinite alternate;
+}
+
+@keyframes anime {
+    from{
+        transform: translate(-10%, -10%);
+    }
+    to{
+        transform: translate(10%, 10%);
+    }
+    
+}
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    
+</body>
+</html>
