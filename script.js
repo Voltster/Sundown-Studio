@@ -22,3 +22,9 @@ var elems = document.querySelectorAll(".elem")
         fixed.style.backgroundImage =`url("${image}")` 
     })
  })
+
+ var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    // centeredSlides: true,
+  });
