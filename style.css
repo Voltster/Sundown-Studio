@@ -526,6 +526,63 @@ object-fit: cover;
     padding: 0 1vw;
 }
 
+.footer-anime{
+    position: relative;
+    width: 100vw;
+    height: 20vh;
+    /* background-color: #fe330a; */
+    bottom: 0;
+}
+.footer-anime .leftAnime{
+    height: 30vw;
+    width: 70vw;
+    position: absolute;
+    /* border-radius: 20%; */
+    background-color: #fe330a;
+    /* background: linear-gradient(19deg,#ff9831,#fe330a 73%) ; */
+    top: -190%;
+    left: -10%;
+    rotate: -15deg;
+    z-index: -1;
+    filter: blur(20px);
+    animation: leftAnime 2s alternate linear infinite;
+}
+
+.footer-anime .rightAnime{
+    height: 40vw;
+    width: 100vw;
+    position: absolute;
+    border-radius: 20%;
+    background-color: #fe330a;
+    /* background: linear-gradient(19deg,#ff9831,#fe330a 73%) ; */
+    rotate: 45deg;
+    z-index: -1;
+    transform: translateX(20%) translateY(-80%);
+    filter: blur(20px);
+    animation: rightAnime 2s alternate linear infinite;
+}
+@keyframes leftAnime {
+    from{
+        filter: blur(20px);
+        transform: translate(0%, 0%) skew(0);
+    }
+    to{
+        filter: blur(50px);
+        transform: translate(8%, 8%) skew(-20deg);
+    }
+    
+}
+@keyframes rightAnime {
+    from{
+        filter: blur(20px);
+        transform: translate(20%, -80%) skew(0);
+    }
+    to{
+        filter: blur(50px);
+        transform: translate(10%, -70%) skew(-20deg);
+    }
+    
+}
 .footer-container{
     display: flex;
     align-items: center;
