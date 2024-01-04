@@ -628,7 +628,7 @@ object-fit: cover;
     height:7vh ;
     background: transparent;
     border: none;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(202, 197, 197);
     color: #EFEAE3;
     margin-top: 2vw;
 }
@@ -873,14 +873,17 @@ object-fit: cover;
         width: 100%;
         display: inline-block;
     }
-    
+    .overlay{
+        display: none;
+    }
     .elem{
         height: 105px;
         width: 100%;
         position: relative;
         display: flex;
         align-items: center;
-        padding: 0 2vw;
+        justify-items: center;
+        padding: 0 1rem;
         border-bottom: none ;
         overflow: hidden;
     }
@@ -1188,4 +1191,53 @@ object-fit: cover;
         line-height: 1.1;
     }
     
+}
+
+
+.loader{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    background-color: #0b0500;
+    top: 0;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader h3{
+
+    font-size: 3rem;
+    color: transparent;
+    background: linear-gradient(to right, #ff681e, #ff5121 , #fe330a );
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation: loader 1s linear 1s;
+}
+
+.loader h3:nth-child(2) {
+    animation-delay: 2s;
+}
+.loader h3:nth-child(3) {
+    animation-delay: 3s;
+}
+
+
+@keyframes loader {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
