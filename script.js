@@ -45,17 +45,18 @@ function projectAnimation() {
 }
 
 function swiperAnimation() {
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        breakpoints: {
-            "@640": {
-                slidesPerView: 1,
-                spaceBetween: 20,
-            },
-        },
-        // centeredSlides: true,
-    });
+    var x = window.matchMedia("(max-width: 600px)")
+    if (x.matches){
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        });
+    } else{
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        });
+    }
 }
 function loaderAnimation() {
     var loader = document.querySelector(".loader")
