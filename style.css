@@ -13,7 +13,7 @@
 html,body{
     height: 100%;
     width: 100%;
-      /* overflow-x:hidden ; */
+    overflow-x:hidden ;
     
 }
 #main{
@@ -687,6 +687,15 @@ object-fit: cover;
 
 
 @media  (max-width:600px) {
+    html,body{
+
+        overflow-x:hidden ;
+        
+    }
+    #main{
+        overflow-x:hidden ;
+
+    }
    
     #section-1{
         min-height: 100vh;
