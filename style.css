@@ -687,8 +687,7 @@ object-fit: cover;
 
 
 @media  (max-width:600px) {
-    html,body{
-
+    body{
         overflow-x:hidden ;
         
     }
@@ -1012,12 +1011,22 @@ object-fit: cover;
         bottom: 0;
     }
     .footer-anime .leftAnime{
-        /* display: hidden; */
-        width: 80vw;
+        height: 60vh;
+        width: 70vh;
+        position: absolute;
+        /* border-radius: 20%; */
+        background-color: #fe330a;
+        /* background: linear-gradient(19deg,#ff9831,#fe330a 73%) ; */
+        top: -120%;
+        left: -50%;
+        rotate: 25deg;
+        z-index: -1;
+        filter: blur(20px);
+        animation: leftAnime 2s alternate linear infinite;
     }
     
     .footer-anime .rightAnime{
-        height: 80vw;
+        height: 40vw;
         width: 100vw;
         position: absolute;
         border-radius: 20%;
@@ -1029,8 +1038,8 @@ object-fit: cover;
     }
     @keyframes leftAnime {
         from{
-            filter: blur(20px);
-            transform: translate(0%, 0%) skew(0);
+            filter: blur(30px);
+            transform: translate(0%, 0%) skew(-10);
         }
         to{
             filter: blur(50px);
