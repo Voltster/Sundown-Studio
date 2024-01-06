@@ -1118,7 +1118,7 @@ object-fit: cover;
     
     }
     .full-scr .link{
-        margin-top: 28vw;
+        padding: 2rem;
         width: 100vw;
         height: 50vh;
         background-color: #EFEAE3;
@@ -1142,11 +1142,11 @@ object-fit: cover;
 
 .loader{
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     position: fixed;
     z-index: 999;
     background-color: #0b0500;
-    top: 0;
+    top: -20%;
     transition: all 0.5s ease;
     display: flex;
     align-items: center;
